@@ -18,7 +18,8 @@ def main():
 def sorted_spill(char_list):
     sorted_list = sorted(char_list, key=lambda x: x["value"], reverse=True)
     for dict in sorted_list:
-        print(f"The '{dict["key"]}' character was found {dict["value"]} times.")
+        if dict["key"].isalpha():
+            print(f"The '{dict["key"]}' character was found {dict["value"]} times.")
     print("--- End report ---")
 
 
